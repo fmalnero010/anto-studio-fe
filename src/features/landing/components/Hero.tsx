@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { Button, Typography } from "@/components/ui";
 import { STATS } from "@/lib/constants";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 16 },
   visible: (delay = 0) => ({
     opacity: 1,

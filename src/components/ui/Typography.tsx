@@ -1,6 +1,6 @@
 import { tv, type VariantProps } from "tailwind-variants";
 import { cn } from "@/lib/utils";
-import type { ElementType, ComponentPropsWithoutRef } from "react";
+import type { ElementType, HTMLAttributes, ReactNode } from "react";
 
 const typographyVariants = tv({
   base: "",
@@ -28,12 +28,9 @@ const typographyVariants = tv({
 
 type TypographyVariants = VariantProps<typeof typographyVariants>;
 
-type TypographyElement = "p" | "h1" | "h2" | "h3" | "h4" | "span" | "div";
-
-interface TypographyProps
-  extends ComponentPropsWithoutRef<TypographyElement>,
-    TypographyVariants {
+interface TypographyProps extends HTMLAttributes<HTMLElement>, TypographyVariants {
   as?: ElementType;
+  children?: ReactNode;
 }
 
 export function Typography({

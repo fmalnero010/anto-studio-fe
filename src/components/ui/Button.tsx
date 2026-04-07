@@ -1,7 +1,7 @@
 import { Slot } from "@radix-ui/react-slot";
 import { tv, type VariantProps } from "tailwind-variants";
 import { cn } from "@/lib/utils";
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 const buttonVariants = tv({
   base: [
@@ -42,6 +42,7 @@ interface ButtonProps
   extends ComponentPropsWithoutRef<"button">,
     ButtonVariants {
   asChild?: boolean;
+  children?: ReactNode;
 }
 
 export function Button({

@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { APP_NAME, APP_SUBTITLE, APP_TAGLINE } from "@/lib/constants";
 import { Typography } from "@/components/ui";
 
@@ -37,13 +36,13 @@ export function Footer() {
       {/* Links */}
       <nav aria-label="Footer navigation" className="flex gap-4 mb-4">
         {FOOTER_LINKS.map((link) => (
-          <Link
+          <a
             key={link.label}
-            to={link.href}
+            href={link.href}
             className="text-[0.5625rem] font-light tracking-[0.08em] text-[#7A706A] hover:text-stone transition-colors"
           >
             {link.label}
-          </Link>
+          </a>
         ))}
       </nav>
 
