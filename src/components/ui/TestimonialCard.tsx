@@ -21,7 +21,7 @@ export function TestimonialCard({
       {/* Quote */}
       <Typography
         variant="h1"
-        className="text-[1.0625rem] font-extralight leading-[1.65] tracking-[0.04em] text-ink mb-4"
+        className="text-[1.0625rem] md:text-[0.9375rem] font-extralight leading-[1.65] tracking-[0.04em] text-ink mb-4"
       >
         &ldquo;{testimonial.quote}&rdquo;
       </Typography>
