@@ -20,11 +20,11 @@ export function Footer() {
           {/* Brand */}
           <div className="mb-5 md:mb-0">
             <div className="flex items-center gap-1.5 mb-1.5">
-              <span className="text-sm font-extralight tracking-[0.4em] text-ivory">
+              <span className="text-sm md:text-base font-extralight tracking-[0.4em] text-ivory">
                 {APP_NAME}
               </span>
               <span className="w-[3px] h-[3px] rounded-full bg-rose" />
-              <span className="text-[0.5rem] font-regular tracking-[0.2em] text-stone">
+              <span className="text-[0.5rem] md:text-[0.625rem] font-regular tracking-[0.2em] text-stone">
                 {APP_SUBTITLE}
               </span>
             </div>
@@ -43,7 +43,7 @@ export function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[0.5625rem] font-light tracking-[0.08em] text-[#7A706A] hover:text-stone transition-colors"
+                className="text-[0.5625rem] md:text-xs font-light tracking-[0.08em] text-[#7A706A] hover:text-stone transition-colors"
               >
                 {link.label}
               </a>

@@ -20,7 +20,7 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={cn("mb-6 md:mb-10", className)}>
-      <div className="flex items-center gap-2 mb-3">
+      <div className="flex items-center gap-2 mb-3 md:mb-4">
         <div className={cn("w-5 h-px", light ? "bg-rose/60" : "bg-rose")} />
         <Typography
           variant="label"

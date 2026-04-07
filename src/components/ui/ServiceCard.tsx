@@ -8,12 +8,12 @@ const serviceCardVariants = tv({
   slots: {
     root: "flex border border-divider rounded-sm overflow-hidden",
     bar: "w-[3px] flex-shrink-0",
-    body: "flex-1 px-3 py-[10px]",
-    tag: "text-[0.5rem] font-medium uppercase tracking-[0.22em] mb-1",
+    body: "flex-1 px-3 py-[10px] md:px-5 md:py-4",
+    tag: "text-[0.5rem] md:text-[0.625rem] font-medium uppercase tracking-[0.22em] mb-1",
     row: "flex items-baseline justify-between gap-2",
-    name: "text-sm font-semibold text-ink",
-    price: "text-[0.6875rem] font-semibold text-rose flex-shrink-0",
-    time: "mt-1 text-[0.625rem] font-light tracking-[0.05em] text-stone",
+    name: "text-sm md:text-base font-semibold text-ink",
+    price: "text-[0.6875rem] md:text-sm font-semibold text-rose flex-shrink-0",
+    time: "mt-1 text-[0.625rem] md:text-xs font-light tracking-[0.05em] text-stone",
   },
   variants: {
     accent: {

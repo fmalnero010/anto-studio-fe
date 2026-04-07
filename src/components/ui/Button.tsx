@@ -6,7 +6,7 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 const buttonVariants = tv({
   base: [
     "inline-flex items-center justify-center",
-    "font-semibold tracking-[0.2em] text-[0.625rem] uppercase",
+    "font-semibold tracking-[0.2em] text-[0.625rem] md:text-xs uppercase",
     "rounded-sm transition-all duration-200",
     "cursor-pointer select-none",
     "disabled:opacity-50 disabled:pointer-events-none",
@@ -22,9 +22,9 @@ const buttonVariants = tv({
         "bg-transparent text-rose border border-rose hover:bg-rose-faint active:scale-[0.98]",
     },
     size: {
-      sm: "h-9 px-4 text-[0.5625rem]",
-      md: "h-[50px] px-6",
-      lg: "h-14 px-8 text-xs",
+      sm: "h-9 px-4 text-[0.5625rem] md:text-[0.625rem]",
+      md: "h-[50px] md:h-[52px] px-6 md:px-8",
+      lg: "h-14 px-8 md:px-10 text-xs md:text-sm",
     },
     fullWidth: {
       true: "w-full",

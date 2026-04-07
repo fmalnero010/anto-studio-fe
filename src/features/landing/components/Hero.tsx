@@ -35,7 +35,7 @@ export function Hero() {
                 custom={0}
                 className="inline-flex items-center border border-divider px-2.5 py-1 mb-4"
               >
-                <span className="text-[0.5rem] font-regular uppercase tracking-[0.22em] text-stone">
+                <span className="text-[0.5rem] md:text-xs uppercase tracking-[0.22em] text-stone">
                   Centro de Estética
                 </span>
               </motion.div>
@@ -113,10 +113,10 @@ export function Hero() {
                         <div className="w-px bg-divider mr-4 self-stretch" />
                       )}
                       <div>
-                        <p className="text-base font-semibold text-ink leading-tight md:text-lg">
+                        <p className="text-base font-semibold text-ink leading-tight md:text-xl">
                           {stat.value}
                         </p>
-                        <p className="text-[0.5625rem] font-light tracking-[0.1em] text-stone mt-0.5 uppercase">
+                        <p className="text-[0.5625rem] md:text-xs font-light tracking-[0.1em] text-stone mt-0.5 uppercase">
                           {stat.label}
                         </p>
                       </div>

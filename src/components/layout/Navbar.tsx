@@ -24,11 +24,11 @@ export function Navbar() {
         >
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1.5">
-            <span className="text-sm font-extralight tracking-[0.4em] text-ink">
+            <span className="text-sm md:text-base font-extralight tracking-[0.4em] text-ink">
               {APP_NAME}
             </span>
             <span className="w-[3px] h-[3px] rounded-full bg-rose mt-0.5" />
-            <span className="text-[0.5rem] font-normal tracking-[0.2em] text-stone">
+            <span className="text-[0.5rem] md:text-[0.625rem] font-normal tracking-[0.2em] text-stone">
               {APP_SUBTITLE}
             </span>
           </Link>

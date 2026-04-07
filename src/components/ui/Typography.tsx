@@ -10,15 +10,15 @@ const typographyVariants = tv({
         "text-[clamp(2rem,8vw,2.5rem)] font-extralight leading-[1.1] tracking-[-0.02em] text-ink",
       "display-bold":
         "text-[clamp(2rem,8vw,2.5rem)] font-bold leading-[1.1] tracking-[-0.02em] text-rose",
-      h1: "text-[1.75rem] font-extralight leading-[1.15] tracking-[-0.01em] text-ink",
-      h2: "text-xl font-bold leading-[1.15] tracking-[-0.01em] text-ink",
-      h3: "text-base font-semibold leading-snug text-ink",
-      body: "text-sm font-light leading-relaxed tracking-[0.03em] text-stone",
-      "body-sm": "text-xs font-light leading-relaxed tracking-[0.03em] text-stone",
+      h1: "text-[1.75rem] md:text-[2rem] font-extralight leading-[1.15] tracking-[-0.01em] text-ink",
+      h2: "text-xl md:text-2xl font-bold leading-[1.15] tracking-[-0.01em] text-ink",
+      h3: "text-base md:text-lg font-semibold leading-snug text-ink",
+      body: "text-sm md:text-base font-light leading-relaxed tracking-[0.03em] text-stone",
+      "body-sm": "text-xs md:text-sm font-light leading-relaxed tracking-[0.03em] text-stone",
       label:
-        "text-[0.625rem] font-medium uppercase tracking-[0.25em] text-rose",
-      caption: "text-[0.6875rem] font-light tracking-[0.08em] text-stone",
-      muted: "text-xs font-light text-stone",
+        "text-[0.625rem] md:text-xs font-medium uppercase tracking-[0.25em] text-rose",
+      caption: "text-[0.6875rem] md:text-xs font-light tracking-[0.08em] text-stone",
+      muted: "text-xs md:text-sm font-light text-stone",
     },
   },
   defaultVariants: {

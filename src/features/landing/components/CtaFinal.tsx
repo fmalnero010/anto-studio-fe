@@ -36,7 +36,7 @@ export function CtaFinal() {
             {/* Label */}
             <div className="flex items-center gap-2 mb-3">
               <div className="w-5 h-px bg-rose" aria-hidden />
-              <span className="text-[0.5rem] font-medium uppercase tracking-[0.22em] text-rose">
+              <span className="text-[0.5rem] md:text-xs font-medium uppercase tracking-[0.22em] text-rose">
                 Tu momento es ahora
               </span>
             </div>
