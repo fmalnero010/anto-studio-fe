@@ -19,7 +19,7 @@ export function Navbar() {
     <>
       <header className="sticky top-0 z-50 bg-linen border-b border-divider">
         <nav
-          className="flex items-center justify-between px-5 h-[68px]"
+          className="flex items-center justify-between px-5 h-[68px] max-w-2xl mx-auto"
           aria-label="Main navigation"
         >
           {/* Logo */}
@@ -58,26 +58,28 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-x-0 top-[68px] z-40 bg-linen border-b border-divider px-5 py-6 flex flex-col gap-5"
+            className="fixed inset-x-0 top-[68px] z-40 bg-linen border-b border-divider"
           >
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={close}
-                className="text-sm font-light tracking-[0.1em] text-ink-secondary hover:text-ink transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            <div className="max-w-2xl mx-auto px-5 py-6 flex flex-col gap-5">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={close}
+                  className="text-sm font-light tracking-[0.1em] text-ink-secondary hover:text-ink transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
 
-            <div className="w-full h-px bg-divider" />
+              <div className="w-full h-px bg-divider" />
 
-            <Button variant="rose" size="md" fullWidth asChild>
-              <Link to="/booking" onClick={close}>
-                Reservar turno
-              </Link>
-            </Button>
+              <Button variant="rose" size="md" fullWidth asChild>
+                <Link to="/booking" onClick={close}>
+                  Reservar turno
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

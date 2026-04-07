@@ -11,9 +11,10 @@ export function HowItWorks() {
     <section
       id="how-it-works"
       ref={ref}
-      className="bg-linen px-5 pt-8 pb-8"
+      className="bg-linen pt-8 pb-8"
       aria-labelledby="how-heading"
     >
+      <div className="max-w-2xl mx-auto px-5">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -36,6 +37,7 @@ export function HowItWorks() {
           ))}
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }

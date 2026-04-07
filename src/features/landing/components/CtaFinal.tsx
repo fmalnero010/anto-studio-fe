@@ -11,7 +11,7 @@ export function CtaFinal() {
   return (
     <section
       ref={ref}
-      className="relative bg-ink px-5 pt-7 pb-8 overflow-hidden"
+      className="relative bg-ink pt-7 pb-8 overflow-hidden"
       aria-labelledby="cta-heading"
     >
       {/* Decorative arch — mirrors hero */}
@@ -24,6 +24,7 @@ export function CtaFinal() {
         className="absolute right-[60px] bottom-[-20px] w-[100px] h-[100px] rounded-full bg-rose/[0.07]"
       />
 
+      <div className="max-w-2xl mx-auto px-5">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -56,6 +57,7 @@ export function CtaFinal() {
           {APP_NAME} Studio · {new Date().getFullYear()}
         </p>
       </motion.div>
+      </div>
     </section>
   );
 }

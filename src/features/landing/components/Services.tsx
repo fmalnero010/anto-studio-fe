@@ -13,9 +13,10 @@ export function Services() {
     <section
       id="services"
       ref={ref}
-      className="bg-white px-5 pt-8 pb-8"
+      className="bg-white pt-8 pb-8"
       aria-labelledby="services-heading"
     >
+      <div className="max-w-2xl mx-auto px-5">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -43,6 +44,7 @@ export function Services() {
           ))}
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }

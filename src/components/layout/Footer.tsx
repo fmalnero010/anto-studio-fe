@@ -11,7 +11,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#120F0D] px-5 py-5">
+    <footer className="bg-[#120F0D] py-5">
+      <div className="max-w-2xl mx-auto px-5">
       {/* Rose top rule */}
       <div className="w-full h-px bg-rose mb-5" />
 
@@ -49,6 +50,7 @@ export function Footer() {
       <Typography as="p" variant="caption" className="text-[#4A4440]">
         © {currentYear} {APP_NAME} {APP_SUBTITLE}
       </Typography>
+      </div>
     </footer>
   );
 }

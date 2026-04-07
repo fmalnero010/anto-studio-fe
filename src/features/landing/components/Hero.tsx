@@ -14,14 +14,15 @@ const fadeUp: Variants = {
 
 export function Hero() {
   return (
-    <section className="relative bg-linen px-5 pt-6 pb-8 overflow-hidden">
-      {/* Decorative arch */}
-      <div
-        aria-hidden
-        className="absolute right-3 top-2 w-[130px] h-[170px] bg-linen-deep opacity-70 rounded-t-[65px]"
-      />
+    <section className="bg-linen pt-6 pb-8 overflow-hidden">
+      <div className="relative max-w-2xl mx-auto px-5">
+        {/* Decorative arch */}
+        <div
+          aria-hidden
+          className="absolute right-3 top-2 w-[130px] h-[170px] bg-linen-deep opacity-70 rounded-t-[65px]"
+        />
 
-      <div className="relative z-10">
+        <div className="relative z-10">
         {/* Category tag */}
         <motion.div
           variants={fadeUp}
@@ -119,6 +120,7 @@ export function Hero() {
             </div>
           ))}
         </motion.div>
+        </div>
       </div>
     </section>
   );
