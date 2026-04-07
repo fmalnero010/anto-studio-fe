@@ -19,7 +19,7 @@ export function SectionHeader({
   id,
 }: SectionHeaderProps) {
   return (
-    <div className={cn("mb-5", className)}>
+    <div className={cn("mb-6 md:mb-10", className)}>
       <div className="flex items-center gap-2 mb-3">
         <div className={cn("w-5 h-px", light ? "bg-rose/60" : "bg-rose")} />
         <Typography
@@ -30,11 +30,11 @@ export function SectionHeader({
         </Typography>
       </div>
 
-      <Typography variant="display" as="h2" id={id}>
+      <Typography variant="display" as="h2" id={id} className="md:text-5xl md:leading-[1.05]">
         {title}
       </Typography>
       {boldTitle && (
-        <Typography variant="display-bold" as="h2">
+        <Typography variant="display-bold" as="h2" className="md:text-5xl md:leading-[1.05]">
           {boldTitle}
         </Typography>
       )}

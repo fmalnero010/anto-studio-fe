@@ -19,7 +19,7 @@ export function Navbar() {
     <>
       <header className="sticky top-0 z-50 bg-linen border-b border-divider">
         <nav
-          className="flex items-center justify-between px-5 h-[68px] max-w-2xl mx-auto"
+          className="flex items-center justify-between px-5 md:px-10 lg:px-16 h-[68px] max-w-6xl mx-auto"
           aria-label="Main navigation"
         >
           {/* Logo */}
@@ -33,19 +33,37 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Hamburger */}
-          <button
-            type="button"
-            onClick={() => { setIsOpen((v) => !v); }}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-            className="p-1 -mr-1 text-ink"
-          >
-            {isOpen
-              ? <X size={20} strokeWidth={1.5} />
-              : <Menu size={20} strokeWidth={1.5} />
-            }
-          </button>
+          {/* Desktop nav links */}
+          <div className="hidden md:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-[0.625rem] font-medium uppercase tracking-[0.18em] text-ink-secondary hover:text-ink transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop CTA + Mobile hamburger */}
+          <div className="flex items-center gap-3">
+            <Button variant="rose" size="sm" asChild className="hidden md:inline-flex">
+              <Link to="/booking">Reservar turno</Link>
+            </Button>
+            <button
+              type="button"
+              onClick={() => { setIsOpen((v) => !v); }}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              className="p-1 -mr-1 text-ink md:hidden"
+            >
+              {isOpen
+                ? <X size={20} strokeWidth={1.5} />
+                : <Menu size={20} strokeWidth={1.5} />
+              }
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -58,9 +76,9 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-x-0 top-[68px] z-40 bg-linen border-b border-divider"
+            className="fixed inset-x-0 top-[68px] z-40 bg-linen border-b border-divider md:hidden"
           >
-            <div className="max-w-2xl mx-auto px-5 py-6 flex flex-col gap-5">
+            <div className="max-w-6xl mx-auto px-5 py-6 flex flex-col gap-5">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
